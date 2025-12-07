@@ -1,0 +1,21 @@
+<div style="font-family: 'Roboto', sans-serif; max-width: 100%; padding: 20px; box-sizing: border-box;">
+  <div style="max-width: 500px; margin: auto; background: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; padding: 24px;">
+    <h2 style="color: #1a73e8; margin-bottom: 16px; font-size: 1.5rem; text-align: center;">Enter Password</h2>
+    <input id="videoIdInput" type="text" placeholder="Enter Code Here" style="width: 100%; padding: 14px 16px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 16px; box-sizing: border-box;" required>
+    <button id="submitBtn" style="width: 100%; background-color: #1a73e8; color: white; padding: 14px 0; font-size: 16px; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
+      Submit
+    </button>
+  </div>
+</div>
+
+<script>
+  document.getElementById("submitBtn").addEventListener("click", function () {
+    const videoId = document.getElementById("videoIdInput").value.trim();
+    if (videoId) {
+      // Open the link in a new tab
+      window.open(`https://codeland.duquette.xyz/09090/clia-password/${videoId}`, '_blank');
+    } else {
+      alert("Please enter a valid video ID.");
+    }
+  });
+</script>
